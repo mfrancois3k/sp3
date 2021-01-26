@@ -1,0 +1,157 @@
+/*============================================*/
+/* Basic Setup /
+/============================================*/
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*===== VARIABLES CSS =====*/
+:root {
+/*===== Colores =====*/
+--first-color: #F2A20C;
+--white-color: #E9EAEC;
+--dark-color: #272D40;
+--dark-color-lighten: #F2F5FF;
+/*===== Fuente y tipografia =====*/
+--body-font: 'Poppins', sans-serif;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--normal-font-size: 1rem;
+--small-font-size: .875rem;
+}
+
+.darkmode {
+  --clr-light: #fdffc4;
+  --clr-dark: #00332a;
+  --clr-primary: #202302;
+  --clr-secondary: #00100d;
+  --clr-accent: #ff7750;
+
+  --foreground: var(--clr-light);
+  --background: var(--clr-dark);
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 0;
+font-family: var(--body-font);
+font-size: var(--normal-font-size);
+height: 100vh;
+line-height: 1.6;
+position: relative;
+}
+
+
+
+.clearfix {
+    
+    clear: both;
+}
+
+div{
+    width: 120px;
+  height: 120px;
+  background-color: #4c3314;
+  float: left;
+  border: 20px outset #553214;
+ 
+            
+}
+
+#btn{
+  border-radius: 40px;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(15, 179, 255);
+}
+div::after {
+    content: 'Dairy Milk';
+    display: block;
+    font-size: 90%;
+    margin-top: 20px;
+   
+    transform: rotate(-45deg);
+}
+
+div::before{
+ 
+}
+.pop::after {
+/*    
+    -webkit-animation: flip-2-ver-left-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: flip-2-ver-left-bck 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both; */
+    
+    content: " ";
+  
+}
+
+.on {
+    color:#f00;
+}
+
+.off {
+    color:#000;
+}
+
+body {
+    background-color: #fafafa;
+    color: #222222;
+}
+
+@media(prefers-color-scheme: dark) {
+    body {
+    	background-color: #222222;
+        color: #fafafa;
+    }
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    color: var(--foreground);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+@-webkit-keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
